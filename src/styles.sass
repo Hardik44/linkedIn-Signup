@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "/app/mixins"
+
+$font-stack: 'SF Compact Display'
+$font-style: Regular
+$url: '/app/assets/SF-Compact-Display-Regular.otf'
+$format: 'otf'
+
+@include font-face($font-stack, $url, null, $font-style, $format)
+
+body
+    font-family: $font-stack
+    font-style: $font-style
+
+
