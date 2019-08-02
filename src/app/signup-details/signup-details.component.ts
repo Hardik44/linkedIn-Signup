@@ -15,7 +15,7 @@ export class SignupDetailsComponent implements OnInit {
   ACCESS_TOKEN: string = 'AccessToken';
   private user: UserDetails;
   private email: string;
-  private profileForm;
+  profileForm;
 
   constructor(
     private ApiService: HttpService,
