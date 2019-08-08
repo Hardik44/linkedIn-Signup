@@ -6,10 +6,115 @@ $font-style: Regular
 $url: '/app/assets/SF-Compact-Display-Regular.otf'
 $format: 'otf'
 
+$color-home: #EF4F49
+$color-black: #575f63
+
 @include font-face($font-stack, $url, null, $font-style, $format)
 
 body
     font-family: $font-stack
     font-style: $font-style
+    text-align: center
 
+form
+  display: inline-block
 
+.default-color
+  color: 	$color-home
+  font-size: 70px
+  line-height: 1.1
+  margin-bottom: 15px
+
+.default-black
+  color: $color-black
+  margin-bottom: 50px
+  margin-top: 15px
+
+.signup-btn
+  text-transform: uppercase
+  color: $color-home
+  background-color: white
+  border: 3px solid $color-home
+  padding: 1% 8%
+  font-weight: bold
+  border-radius: 0
+
+.signup-btn:hover
+  background-color: $color-home
+  color: white
+  font-weight: bold
+  padding: 1% 8%
+
+.btn-home
+  padding: 2% 4%
+
+.btn-home:hover
+  padding: 2% 4%
+
+.form-label
+  color: $color-black
+  text-transform: uppercase
+  font-size: small
+  font-weight: bold
+  text-align: start
+
+.form-control
+  width: 450px
+  height: 60px
+  background-color: $color-black
+  font-weight: bold
+  color: white
+  font-size: 20px
+
+.pass
+  background-color: white
+  color: $color-black
+  font-weight: lighter
+
+.top
+  width: 60%
+  margin: auto
+  padding-top: auto
+
+.top-img
+  margin-top: 7%
+  margin-bottom: 2%
+
+.top-line
+  margin-bottom: 5%
+  width: 65%
+
+.down
+  margin-top: 6%
+  margin-bottom: 4%
+
+@media only screen and (max-width: 1200px)
+  .default-color
+    font-size: 60px
+
+  .default-black
+    font-size: 20px
+
+  .form-control
+    width: 400px
+
+@media only screen and (max-width: 992px)
+  .default-color
+    font-size: 45px
+
+  .default-black
+    font-size: 15px
+
+@media only screen and (max-width: 600px)
+  .form-control
+    width: 320px
+
+  .default-black
+    font-size: 12px
+
+  .default-color
+    font-size: 25px
+
+  .down
+    margin-top: 3%
+    margin-bottom: 4%

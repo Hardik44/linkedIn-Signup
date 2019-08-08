@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {HttpService} from '../http.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {UserDetails} from '../user-details';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormGroupDirective, Validators} from '@angular/forms';
 
 
 @Component({
@@ -16,12 +16,13 @@ export class SignupDetailsComponent implements OnInit {
   private user: UserDetails;
   private email: string;
   profileForm;
+  documentEditForm: FormGroupDirective;
 
   constructor(
     private ApiService: HttpService,
     private activatedRoute: ActivatedRoute,
     private Router: Router,
-  ) {
+) {
 
     this.activatedRoute.queryParams.subscribe(params => {
       this.Access_code = params['code'];
